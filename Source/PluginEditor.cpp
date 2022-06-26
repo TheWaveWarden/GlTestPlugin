@@ -15,12 +15,10 @@ FilterBankEditor::FilterBankEditor(FilterBankAudioProcessor &p)
   m_openGL.setOpenGLVersionRequired(
       juce::OpenGLContext::OpenGLVersion::openGL3_2);
   setOpaque(false);
+  
   m_openGL.setContinuousRepainting(true);
   m_openGL.setRenderer(this);
   m_openGL.attachTo(*this);
-
-  // if (auto *peer = getPeer())
-  //   peer->setCurrentRenderingEngine(0);
 
   setSize(800, 600);
 }
